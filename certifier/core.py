@@ -9,6 +9,7 @@ class CertInfo(object):
 
     def __init__(self):
         self.context = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+        self.context.load_default_certs()
         self.context.verify_mode = ssl.CERT_REQUIRED
         self.default_context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
 
