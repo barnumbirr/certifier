@@ -38,6 +38,10 @@ class CertInfo(object):
         data = self.raw_query_data(host, port)
         return data.version()
 
+    def cipher(self, host, port):
+        data = self.raw_query_data(host, port)
+        return data.cipher()
+
     def default_paths(self):
         return ssl.get_default_verify_paths()
 
