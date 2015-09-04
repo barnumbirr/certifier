@@ -12,7 +12,7 @@ setup(
     author_email='me@martinsimon.me',
     license='Apache v2.0 License',
     packages=['certifier'],
-    description='',
+    description='Get all the information you need about your SSL certificates.',
     long_description=file('README.md','r').read(),
     keywords=[''],
 )
