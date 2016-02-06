@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name='certifier',
-    version='0.1',
+    version='0.2',
     url='https://github.com/mrsmn/certifier',
     download_url='https://github.com/mrsmn/certifier/archive/master.zip',
     author='Martin Simon',
