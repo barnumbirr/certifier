@@ -1,7 +1,6 @@
 <h1><img src="https://raw.githubusercontent.com/remindr/certifier/master/doc/certifier.png" height=85 alt="certifier" title="certifier"> certifier</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/certifier.svg)](https://pypi.python.org/pypi/certifier/)   [![Downloads](http://img.shields.io/pypi/dm/certifier.svg)](https://pypi.python.org/pypi/certifier/)
-[![Code Health](https://landscape.io/github/mrsmn/certifier/master/landscape.svg)](https://landscape.io/github/mrsmn/certifier/master)
 
 **certifier** is an APACHE licensed Python library allowing you to get all the information you'll ever want about your SSL certificates.
 
