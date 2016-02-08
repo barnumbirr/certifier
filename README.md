@@ -14,7 +14,7 @@ From source use
 or install from PyPi
 
 		$ pip install certifier
-		
+
 ## Documentation:
 
 ```python
@@ -45,7 +45,7 @@ DefaultVerifyPaths(cafile='/usr/lib/ssl/cert.pem', capath='/usr/lib/ssl/certs', 
 ```
 
 ```python
->>> cert.stats()
+>>> cert.cert_stats()
 {'x509': 155, 'x509_ca': 155, 'crl': 0}
 ```
 
@@ -54,6 +54,15 @@ DefaultVerifyPaths(cafile='/usr/lib/ssl/cert.pem', capath='/usr/lib/ssl/certs', 
 [{'notBefore': u'Apr 16 07:09:14 2007 GMT', 'serialNumber': u'49330001', 'notAfter': 'Apr 16 07:09:14 2027 GMT', 'version': 3L, 'subject': ((('countryName', u'CN'),), (('organizationName', u'CNNIC'),), (('commonName', u'CNNIC ROOT'),)), 'issuer': ((('countryName', u'CN'),), (('organizationName', u'CNNIC'),), (('commonName', u'CNNIC ROOT'),))}, {[...]}]
 ```
 
+```python
+>>> cert.openssl_version()
+OpenSSL 0.9.8zg 14 July 2015
+```
+
+```python
+>>> cert.session_stats()
+{'connect_renegotiate': 0L, 'hits': 0L, 'accept_good': 0L, 'cache_full': 0L, 'accept_renegotiate': 0L, 'timeouts': 0L, 'number': 0L, 'accept': 0L, 'connect_good': 2L, 'connect': 2L, 'misses': 0L}
+```
 
 ## License:
 

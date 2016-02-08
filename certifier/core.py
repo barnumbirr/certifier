@@ -24,6 +24,14 @@ class CertInfo(object):
         raw_data = self.default_context
         return raw_data
 
+    def openssl_version(self):
+        """ https://docs.python.org/2/library/ssl.html#ssl.OPENSSL_VERSION """
+        return ssl.OPENSSL_VERSION
+
+    def session_stats(self):
+        """ https://docs.python.org/2/library/ssl.html#ssl.SSLContext.session_stats """
+        return self.context.session_stats()
+
     def info(self, binary_form=None):
         """ https://docs.python.org/2/library/ssl.html#ssl.SSLSocket.getpeercert """
         data = self._raw_query_data(self.host, self.port)
@@ -51,7 +59,7 @@ class CertInfo(object):
         """ https://docs.python.org/2/library/ssl.html#ssl.get_default_verify_paths """
         return ssl.get_default_verify_paths()
 
-    def stats(self):
+    def cert_stats(self):
         """ https://docs.python.org/2/library/ssl.html#ssl.SSLContext.cert_store_stats """
         return self._raw_stats_data().cert_store_stats()
 
