@@ -1,18 +1,44 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from distutils.core import setup
+# To use a consistent encoding
+from os import path
+from codecs import open
+# Always prefer setuptools over distutils
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
+here = path.abspath(path.dirname(__file__))
+
+# Get the long description from the README file
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
-    name='certifier',
-    version='0.2',
-    url='https://github.com/mrsmn/certifier',
-    download_url='https://github.com/mrsmn/certifier/archive/master.zip',
-    author='Martin Simon',
-    author_email='me@martinsimon.me',
-    license='Apache v2.0 License',
-    packages=['certifier'],
-    description='Get all the information you need about your SSL certificates.',
-    long_description=file('README.md','r').read(),
-    keywords=[''],
+    name = 'certifier',
+    packages = ['certifier'],
+    version = '0.2.1',
+    description = 'Get all the information you need about your SSL certificates.',
+    author = 'Martin Simon',
+    author_email = 'me@martinsimon.me',
+    url = 'https://github.com/barnumbirr/certifier',
+    project_urls={
+        'Bug Reports': 'https://github.com/barnumbirr/certifier/issues',
+        'Buy me a coffee': 'https://github.com/barnumbirr/certifier#buy-me-a-coffee',
+    },
+    license = 'Apache v2.0 License',
+    keywords = ['TLS', 'certificate', 'SSL'],
+    classifiers=[
+        'License :: OSI Approved :: Apache Software License',
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    long_description = long_description,
+    long_description_content_type='text/markdown',
 )
