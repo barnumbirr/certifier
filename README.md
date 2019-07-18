@@ -9,13 +9,13 @@
 From source use
 
 ```bash
-	$ python setup.py install
+$ python setup.py install
 ```
 
 or install from PyPi
 
 ```bash
-	$ pip install certifier
+$ pip install certifier
 ```
 
 ## Documentation:
